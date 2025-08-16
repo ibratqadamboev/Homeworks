@@ -36,6 +36,9 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) :
 async def help_command(update : Update, context : ContextTypes):
     await update.message.reply_text("Mavjud bot komandalari : /start, /help")
 
+async def ishlab_chiqaruvchi(update : Update, context :ContextTypes) :
+    await update.message.reply_text("Ishlab chiqaruvchi : Ibrat Qadamboyev")
+
 # Message handler
 async def message_handler(update : Update, context : ContextTypes) :
     user_text = update.message.text 
@@ -53,6 +56,7 @@ if __name__ == '__main__':
     # Handlers
     app.add_handler(CommandHandler('start', start))
     app.add_handler(CommandHandler("help", help_command))
+    app.add_handler(CommandHandler("ishlab_chiqaruvchi", ishlab_chiqaruvchi))
 
     # Message handler
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, message_handler))
