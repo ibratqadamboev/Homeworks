@@ -34,10 +34,10 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) :
 
 # Command handler for /help command
 async def help_command(update : Update, context : ContextTypes):
-    await update.message.reply_text("Mavjud bot komandalari : /start, /help")
+    await update.message.reply_text("Mavjud bot komandalari : /start, /help, /ishlab_chiqaruvchi")
 
 async def ishlab_chiqaruvchi(update : Update, context :ContextTypes) :
-    await update.message.reply_text("Ishlab chiqaruvchi : Ibrat Qadamboyev")
+    await update.message.reply_text("Ishlab chiqaruvchi :@Ibrat_Qadamboyev_7")
 
 # Message handler
 async def message_handler(update : Update, context : ContextTypes) :
